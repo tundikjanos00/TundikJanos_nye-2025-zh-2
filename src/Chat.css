@@ -1,0 +1,24 @@
+.chat {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1024px;
+    margin: 24px auto;
+    height: calc(100% - 32px);
+}
+
+.conversation-list {
+    width: 240px;
+    border: 1px solid #a0a0a0;
+    border-radius: 8px;
+}
+
+.conversation-list ul li button {
+    background: transparent;
+    color: #232323;
+    border: none;
+}
+.conversation-list ul li button:hover {
+    background: #f0f0f0;
+    border: 1px solid #a0a0a0;
+    cursor: pointer;
+}
