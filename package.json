@@ -22,13 +22,8 @@
     "start": "react-scripts start",
     "dev:server": "nodemon src/server/server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test calculate-chat-cost",
     "eject": "react-scripts eject"
-  },
-  "jest": {
-    "testMatch": [
-      "**/**/calculate-chat-cost.test.js"
-    ]
   },
   "eslintConfig": {
     "extends": [

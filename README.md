@@ -4,7 +4,7 @@ These tasks should be completed if you failed to address the tasks in the ["zh"]
 
 ## HTML / CSS
 
-There was a change already made in `src/ChatContainer.js` for the "active" logic for like/dislike buttons in the latest commit.
+There was a change already made in `src/ChatContainer.js` for the "active" logic for like/dislike buttons in [cab621a368954577e4d4bd4e67b38d4ca5b3b51c](https://github.com/szalontaijordan/nye-2025-zh-2/commit/cab621a368954577e4d4bd4e67b38d4ca5b3b51c).
 
 Using **CSS ONLY** make the component look like as on the screenshot:
 
