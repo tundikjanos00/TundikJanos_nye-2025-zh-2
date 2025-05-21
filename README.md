@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Makeup tasks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+These tasks should be completed if you failed to address the tasks in the ["zh"](https://github.com/szalontaijordan/nye-2025-zh/tree/main)
 
-## Available Scripts
+## HTML / CSS
 
-In the project directory, you can run:
+There was a change already made in `src/ChatContainer.js` for the "active" logic for like/dislike buttons in the latest commit.
 
-### `npm start`
+Using **CSS ONLY** make the component look like as on the screenshot:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+DO NOT CHANGE THE JSX CODE.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+![reference](./like-dislike.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The CSS can be added into the CSS of the component e.g. `src/ChatContainer.css`
 
-### `npm run build`
+HINT: emojis count as regular unicode characters, even in CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+HINT: when clicking a button an `active` class is added to them. The "not active" buttons are grayscale, the "active" was are with color. See JSX code for details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before you begin, make sure the project is properly set up.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd <location you cloned the repository to>
+npm install
+```
+To run the app locally:
+```
+npm start
+```
 
-### `npm run eject`
+To see a response simply send a message to the chat (e.g. "a"). Don't worry about starting the backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## JS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There is **1** function to implement. If all unit tests pass, you can consider the implementation successful. Feel free to use any built-ins, documentation, help, etc. for your solution.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You can find this in:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`src/utils/calculate-chat-cost.js`
 
-## Learn More
+The details are written in the form of jsdoc comments e.g.
+```
+/*
+      TODO: implement function below based on the jsdoc.
+*/
+ ```
+Before you begin, make sure the project is properly set up.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+cd <location you cloned the repository to>
+npm install
+```
+To run tests:
+```
+npm run test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Submitting your solution
+Make sure both tasks are completed. If you feel so, open a PR to the main branch from your dedicated branch e.g. `main <-- zh/jordan-szalontai`
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
