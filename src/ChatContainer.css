@@ -69,4 +69,14 @@
 }
 
 /* TODO: implement CSS solution here */
+.like-dislike-button {
+    filter: grayscale(100%);
+}
+
+.like-dislike-button.active {
+    filter: none;
+}
+
+
+/* TODO: implement CSS solution here */
 /* NOTE: don't forget about the JS task */
