@@ -65,9 +65,61 @@ const ONE_USD = 355.63; // HUF
  *  * if the currency is invalid the returned value is `N/A`
  *  * if the tokens to be counted are not from the enum the returned value is `N/A`
  */
-export function calculateChatCost(conversation, params) {
-    //
-    // TODO: your code here
-    //
-    return `0 USD`;
+export function calculateChatCost(conversation, params) 
+{
+    const { currency, count } = params;
+
+    if (!['USD', 'HUF'].includes(currency)) return 'N/A';
+    if (!['prompt', 'completion', 'total'].includes(count)) return 'N/A';
+
+    let totalCostUSD = 0;
+
+    for (const item of conversation) 
+        {
+        const model = item.model;
+        const usage = item.usage;
+
+        const modelCosts = MODEL_COST_MAP[model];
+        if (!modelCosts) 
+        {
+            console.warn('Unknown model');
+            continue;
+        }
+
+        let cost = 0;
+        if (count === 'prompt') 
+        {
+            cost = usage.prompt_tokens * modelCosts.input / 1_000_000;
+        } 
+        else if (count === 'completion') 
+        {
+            cost = usage.completion_tokens * modelCosts.output / 1_000_000;
+        } 
+        else if (count === 'total') 
+            {
+            cost = 
+            (
+                usage.prompt_tokens * modelCosts.input +
+                usage.completion_tokens * modelCosts.output
+            ) / 1_000_000;
+        }
+
+        totalCostUSD += cost;
+    }
+
+    let result = totalCostUSD;
+    if (currency === 'HUF') 
+    {
+        result *= ONE_USD;
+    }
+
+    // === FORMÁZÁS MEGOLDÁSA ===
+    // ha egész, ne legyen tizedes:
+    if (Number.isInteger(result)) 
+        {
+        return `${result} ${currency}`;
+    }
+
+    // ha nem egész, de felesleges 0-k vannak a végén: vágjuk le
+    return `${parseFloat(result.toFixed(6))} ${currency}`;
 }
